@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color:black;">
+    
+    <div class="appHeader text-center">
+        <h1 class="display-4">Weather App</h1>
+    </div>
+
+    <div class="containerClass">
+        <div class="row">
+            
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xs-1">
+                <div class="card">
+                </div>
+                <div class="card-body" id="cardOne">
+                    <div>
+                        <h4 class="alignLeft card-title">Location: </h4>
+                        <h4 id="location1" class="alignRight card-title"></h4>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5 class="alignLeft card-title">Temperature: </h5>
+                        <h5 class="alignRight card-title" id="temperature1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Min/Max: </h5>
+                        <h5 class="alignRight card-title" id="minMax1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Wind: </h5>
+                        <h5 class="alignRight card-title" id="wind1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Pressure: </h5>
+                        <h5 class="alignRight card-title" id="pressure1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Humidity: </h5>
+                        <h5 class="alignRight card-title" id="humidity1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunrise: </h5>
+                        <h5 class="alignRight card-title" id="sunrise1"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunset: </h5>
+                        <h5 class="alignRight card-title" id="sunset1"></h5>
+                    </div>
+                    <hr>
+                    <h4 class="card-title">Forecast: </h4>
+                    <div class="forecastClass">
+                        <div class="dayClass" id="forecastOne1">
+                            <i class="fa fa-tint" aria-hidden="true"></i>
+                            <p>45/45°C</p>
+                        </div>
+                        <div class="dayClass" id="forecastTwo1">
+                            <i class="fa fa-tint" aria-hidden="true"></i>
+                            <p>45/45°C</p>
+                        </div>
+                        <div class="dayClass" id="forecastThree1">
+                            <i class="fa fa-tint" aria-hidden="true"></i>
+                            <p>45/45°C</p>
+                        </div>
+                      </div>
+                    <hr>
+                    <input type="text" id="input1" class="form-control" placeholder="Enter a city">
+                    <h1></h1>
+                    <button type="button" onclick="getWeatherByCity(1)" class="btn btn-primary btn-sm btn-block">Change city</button>
+                  </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xs-1">
+                <div class="card">
+                </div>
+                <div class="card-body" id="cardTwo">
+                    <div>
+                        <h4 class="alignLeft card-title">Location: </h4>
+                        <h4 id="location2" class="alignRight card-title"></h4>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5 class="alignLeft card-title">Temperature: </h5>
+                        <h5 class="alignRight card-title" id="temperature2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Min/Max: </h5>
+                        <h5 class="alignRight card-title" id="minMax2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Wind: </h5>
+                        <h5 class="alignRight card-title" id="wind2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Pressure: </h5>
+                        <h5 class="alignRight card-title" id="pressure2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Humidity: </h5>
+                        <h5 class="alignRight card-title" id="humidity2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunrise: </h5>
+                        <h5 class="alignRight card-title" id="sunrise2"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunset: </h5>
+                        <h5 class="alignRight card-title" id="sunset2"></h5>
+                    </div>
+                    <hr>
+                    <h4 class="card-title">Forecast: </h4>
+                    <div class="forecastClass">
+                        <div class="dayClass" id="forecastOne2">
+                            <i class="fa fa-cloud" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                        <div class="dayClass" id="forecastTwo2">
+                            <i class="fa fa-cloud" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                        <div class="dayClass" id="forecastThree2">
+                            <i class="fa fa-cloud" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                      </div>
+                    <hr>
+                    <input type="text" id="input2" class="form-control" placeholder="Enter a city">
+                    <h1></h1>
+                    <button type="button" onclick="getWeatherByCity(2)" class="btn btn-primary btn-sm btn-block">Change city</button>
+                  </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xs-1">
+                <div class="card">
+                </div>
+                <div class="card-body" id="cardThree">
+                    <div>
+                        <h4 class="alignLeft card-title">Location: </h4>
+                        <h4 id="location3" class="alignRight card-title"></h4>
+                    </div>
+                    <hr>
+                    <div>
+                        <h5 class="alignLeft card-title">Temperature: </h5>
+                        <h5 class="alignRight card-title" id="temperature3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Min/Max: </h5>
+                        <h5 class="alignRight card-title" id="minMax3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Wind: </h5>
+                        <h5 class="alignRight card-title" id="wind3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Pressure: </h5>
+                        <h5 class="alignRight card-title" id="pressure3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Humidity: </h5>
+                        <h5 class="alignRight card-title" id="humidity3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunrise: </h5>
+                        <h5 class="alignRight card-title" id="sunrise3"></h5>
+                    </div>
+                    <div>
+                        <h5 class="alignLeft card-title">Sunset: </h5>
+                        <h5 class="alignRight card-title" id="sunset3"></h5>
+                    </div>
+                    <hr>
+                    <h4 class="card-title">Forecast: </h4>
+                    <div class="forecastClass">
+                        <div class="dayClass" id="forecastOne3">
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                        <div class="dayClass" id="forecastTwo3">
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                        <div class="dayClass" id="forecastThree3">
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <h2>45°C</h2>
+                        </div>
+                      </div>
+                    <hr>
+                    <input type="text" id="input3" class="form-control" placeholder="Enter a city">
+                    <h1></h1>
+                    <button type="button" onclick="getWeatherByCity(3)" class="btn btn-primary btn-sm btn-block">Change city</button>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

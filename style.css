@@ -1,0 +1,108 @@
+.appHeader {
+    font-family: 'Lobster', cursive;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: whitesmoke;
+}
+
+.card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none !important;
+    border-color: black !important;
+}
+
+.card-title {
+    color: white;
+}
+
+hr {
+    background-color: greenyellow;
+    display:inline-block;
+    width:100%;
+}
+
+div {
+    display:inline-block;
+    width:100%;
+}
+
+.form-control {
+    color: greenyellow !important;
+    background-color: black !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+}
+
+.forecastClass {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.dayClass {
+    flex: 1 0 20%;
+    margin: 5px;
+    height: 100px;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  #cardOne {
+    background-image: url(assets/rain.gif);
+    border-radius: 20px;
+    border: 2px solid #dfe1e5;
+    box-shadow: 2px 2px white;
+  }
+
+  #cardTwo {
+    background-image: url(assets/sunny.jpg);
+    border-radius: 20px;
+    border: 2px solid #dfe1e5;
+    box-shadow: 2px 2px white;
+  }
+
+  #cardThree {
+    background-image: url(assets/cloudy.jpg);
+    border-radius: 20px;
+    border: 2px solid #dfe1e5;
+    box-shadow: 2px 2px white;
+  }
+
+  .containerClass {
+      margin-left: 4%;
+      margin-right: 4%;
+  }
+
+  .fa {
+    font-size: 3em !important;
+  }
+
+  .fa-sun-o {
+    color: yellow;
+  }
+
+  .fa-cloud {
+    color: grey;
+  }
+
+  .fa-tint {
+    color: rgb(23, 180, 233);
+  }
+
+  h2 {
+    color: white
+  }
+
+  p {
+    color: white
+  }
+
+  .alignRight {
+    float: right;
+  }
+
+  .alignLeft {
+    float: left;
+  }
